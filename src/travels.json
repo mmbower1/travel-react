@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Grand Canyon",
+        "image": "https://https://commons.wikimedia.org/wiki/Grand_Canyon#/media/File:Grandcanyon_view5.jpgupload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/666px-Spongebob-squarepants.svg.png",
+        "area": "1902 sq. miles",
+        "location": "Arizona"
+    },
+    {
+        "id": 2,
+        "name": "San Francisco",
+        "image": "https://commons.wikimedia.org/wiki/San_Francisco#/media/File:San_Francisco_DSC09797.JPG",
+        "area": "46.8 sq. miles",
+        "location": "California"
+    },
+    {
+        "id": 3,
+        "name": "Paris",
+        "image": "https://commons.wikimedia.org/wiki/Paris#/media/File:Paris_-_Eiffelturm_und_Marsfeld2.jpg",
+        "area": "40.7 sq. miles",
+        "location": "France"
+    }
+]
