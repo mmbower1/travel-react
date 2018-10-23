@@ -19,5 +19,54 @@
         "image": "https://commons.wikimedia.org/wiki/Paris#/media/File:Paris_-_Eiffelturm_und_Marsfeld2.jpg",
         "area": "40.7 sq. miles",
         "location": "France"
+    },
+    {
+        "id": 4,
+        "name": "Tokyo",
+        "image": "",
+        "area": "845 sq. miles",
+        "location": "Japan"
+    },
+    {
+        "id": 5,
+        "name": "Cancun",
+        "image": "",
+        "area": "764 sq. miles",
+        "location": "Mexico"
+    },
+    {
+        "id": 6,
+        "name": "London",
+        "image": "",
+        "area": "302.6 sq. miles",
+        "location": "New York"
+    },
+    {
+        "id": 7,
+        "name": "Israel",
+        "image": "",
+        "area": "8,019 sq. miles",
+        "location": "New York"
+    },
+    {
+        "id": 8,
+        "name": "Thailand",
+        "image": "",
+        "area": "198,117 sq. miles",
+        "location": "New York"
+    },
+    {
+        "id": 9,
+        "name": "Singapore",
+        "image": "",
+        "area": "278.6 sq. miles",
+        "location": "New York"
+    },
+    {
+        "id": 10,
+        "name": "Brazil",
+        "image": "",
+        "area": "3,200,000 sq. miles",
+        "location": "New York"
     }
 ]

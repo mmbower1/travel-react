@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import TravelCard from "./components/TravelCard";
+import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
+import TravelCard from "./components/TravelCard";
 import travels from "./travels.json";
 import './App.css';
 
@@ -10,6 +11,7 @@ class App extends Component {
   state = {
     travels
   };
+
   componentDidMount = () => {
     this.setState({
       travels: travels
@@ -21,17 +23,23 @@ class App extends Component {
     //sets this.state.travels equal to new travels array
     this.setState({ travels });
   };
+  
   render() {
     console.log(this.state)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        {/* <header className="App-header">
+          <img src={logo} className="App-logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
 
-        </header>
+        </header> */}
+        <Navbar>
+          <div>
+            <h1>Hi</h1>
+          </div>
+        </Navbar>
         <Wrapper>
           <h1 className="title">Travel List</h1>
           {this.state.travels.map(travels => (
@@ -41,6 +49,7 @@ class App extends Component {
               name={travels.name}
               image={travels.image}
               location={travels.location}
+              area={travels.area}
             />
           ))}
         </Wrapper>
