@@ -2,7 +2,7 @@ import React from "react";
 import "./TravelCard.css";
 
 const TravelCard = props => (
-    <div>
+    <div className="card-wrapper">
         <div className="card">
             <div className="img-container">
                 <img alt={props.name} src={props.image}></img>

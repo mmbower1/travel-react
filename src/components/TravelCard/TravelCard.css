@@ -1,0 +1,9 @@
+.card-wrapper {
+    background-color: white;
+    border-radius: 15px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    width: 200px;
+}

@@ -9,6 +9,8 @@ import './App.css';
 class App extends Component {
   //setting this.state.friends to the travels json array
   state = {
+    score: 0,
+    topScore: 0,
     travels
   };
 
@@ -35,11 +37,7 @@ class App extends Component {
           </p>
 
         </header> */}
-        <Navbar>
-          <div>
-            <h1>Hi</h1>
-          </div>
-        </Navbar>
+        <Navbar score={this.state.score} topScore={this.state.topScore} />
         <Wrapper>
           <h1 className="title">Travel List</h1>
           {this.state.travels.map(travels => (
