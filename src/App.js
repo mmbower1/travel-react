@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import TravelCard from "./components/TravelCard";
-import travels from "./travels.json";
+import Travels from "./travels.json";
 import './App.css';
 
 class App extends Component {
@@ -15,14 +15,15 @@ class App extends Component {
     score: 0,
     topScore: 0,
     picked: [],
-    travels: travels
+    travels: Travels
   };
 
-  buttonChoice(event) {
-    console.log("btn-choice");
+  buttonChoice = (event)=> {
 
-    const choice = event.target.dataset.name;
-    const checkIfInArray = this.state.picked.indexOf(choice);
+    const choice = parseInt(event.target.getAttribute('index'));
+    console.log(choice);
+    console.log(this.state.travels)
+    const checkIfInArray = this.state.travels.indexOf(choice);
 
     var checkIfTopScore = 0;
 
@@ -78,12 +79,13 @@ class App extends Component {
         <Navbar score={this.state.score} topScore={this.state.topScore} />
         <Wrapper >
           <h1 className="title">Travel List</h1>
-          {this.state.travels.map(travels => (
+          {this.state.travels.map(travel => (
             <TravelCard 
-              key={travels.id}
-              name={travels.name}
-              image={travels.image}
+              key={travel.id}
+              name={travel.name}
+              image={travel.image}
               buttonChoice={this.buttonChoice}
+              index={travel.id}
             />
           ))}
         </Wrapper>
