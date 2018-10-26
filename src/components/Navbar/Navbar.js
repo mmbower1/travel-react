@@ -6,7 +6,7 @@ class Navbar extends Component {
         return (
             <div>
                 <div className="topnav">
-                    <a className="active" href="#home">Clicky Game ||</a>
+                    <div className="active" >Clicky City Game!</div>
                     <div className="score">Score={this.props.score} Top Score={this.props.topScore}</div>
                 </div>
             </div>

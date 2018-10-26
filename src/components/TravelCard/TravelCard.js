@@ -1,28 +1,24 @@
 import React from "react";
 import "./TravelCard.css";
-
-const TravelCard = props => (
-    <div className="card-wrapper">
-        <div className="card">
-            <div className="img-container">
-                <img alt={props.name} src={props.image}></img>
+import "../../travels.json";
+    
+    const TravelCard = props => (
+        <div onClick={()=> props.buttonChoice()} className="card-wrapper">
+            <div className="card">
+                <div className="img-container">
+                <h3>{props.name}</h3>
+                <img src={props.image} alt={props.name}/>
+                </div>
+            </div>
+            <div className="content">
+                <ul>
+                    <p>
+                        <strong>Name: </strong> {props.name}
+                    </p>
+                </ul>
+                <span onClick={() => Math.floor(Math.random(props.id))} className="randomize"></span>
             </div>
         </div>
-        <div className="content">
-            <ul>
-                <li>
-                    <strong>Name: </strong> {props.name}
-                </li>
-                <li>
-                    <strong>Location: </strong> {props.location}
-                </li>
-                <li>
-                    <strong>Area: </strong> {props.area}
-                </li>
-            </ul>
-            <span onClick={() => props.removeTravel(props.id)} className="remove"></span>
-        </div>
-    </div>
-);
+    );
 
 export default TravelCard;

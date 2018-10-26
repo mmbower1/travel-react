@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import TravelCard from "./components/TravelCard";
@@ -7,53 +7,89 @@ import travels from "./travels.json";
 import './App.css';
 
 class App extends Component {
+
   //setting this.state.friends to the travels json array
   state = {
+    css: "start",
+    text: "Click a button to start",
     score: 0,
     topScore: 0,
-    travels
+    picked: [],
+    travels: travels
   };
 
-  componentDidMount = () => {
-    this.setState({
-      travels: travels
-    });
-  }
+  buttonChoice(event) {
+    console.log("btn-choice");
 
-  removeTravel = id => {
-    const travels = this.state.travels.filter(travel => travel.id !== id);
-    //sets this.state.travels equal to new travels array
-    this.setState({ travels });
+    const choice = event.target.dataset.name;
+    const checkIfInArray = this.state.picked.indexOf(choice);
+
+    var checkIfTopScore = 0;
+
+    const scoreVal = this.state.score;
+    const topScoreVal = this.state.topScore;
+
+    // Check if you're currently tied for high score
+    if (topScoreVal === scoreVal) {
+      checkIfTopScore = 1;
+    } else {
+      checkIfTopScore = 0;
+    };
+
+    if (checkIfInArray > -1) {
+      // If you pick incorrectly
+      this.setState({ score: 0 , picked: [] , css: "incorrectGuess" , text: "Duplicate! Try again." });
+    } else {
+      // If you pick correctly
+      this.setState({ picked: [...this.state.picked, `${choice}`] , score: this.state.score + 1 , css: "correctGuess", 
+      text: "Good pick!" });
+      
+      this.setState({ topScore: this.state.topScore + checkIfTopScore });
+    }
+    
+    this.shuffle(this.state.travels);
+    
   };
-  
+
+  shuffle = (array) => {
+    console.log("here");
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    console.log(array);
+    return array;
+  };
+
   render() {
     console.log(this.state)
     return (
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-
-        </header> */}
+      <div className="App" >
         <Navbar score={this.state.score} topScore={this.state.topScore} />
-        <Wrapper>
+        <Wrapper >
           <h1 className="title">Travel List</h1>
           {this.state.travels.map(travels => (
-            <TravelCard
-              removeTravel={this.removeTravel}
-              id={travels.id}
+            <TravelCard 
+              key={travels.id}
               name={travels.name}
               image={travels.image}
-              location={travels.location}
-              area={travels.area}
+              buttonChoice={this.buttonChoice}
             />
           ))}
         </Wrapper>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;

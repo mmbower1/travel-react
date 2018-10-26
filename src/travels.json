@@ -2,71 +2,85 @@
     {
         "id": 1,
         "name": "Grand Canyon",
-        "image": "https://https://commons.wikimedia.org/wiki/Grand_Canyon#/media/File:Grandcanyon_view5.jpgupload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/666px-Spongebob-squarepants.svg.png",
-        "area": "1902 sq. miles",
+        "image": "./images/0531fyp.jpg",
+        "area": "",
         "location": "Arizona"
     },
     {
         "id": 2,
         "name": "San Francisco",
-        "image": "https://commons.wikimedia.org/wiki/San_Francisco#/media/File:San_Francisco_DSC09797.JPG",
+        "image": "./images/SF.jpg",
         "area": "46.8 sq. miles",
         "location": "California"
     },
     {
         "id": 3,
         "name": "Paris",
-        "image": "https://commons.wikimedia.org/wiki/Paris#/media/File:Paris_-_Eiffelturm_und_Marsfeld2.jpg",
+        "image": "./images/eiffel-tower.jpg",
         "area": "40.7 sq. miles",
         "location": "France"
     },
     {
         "id": 4,
         "name": "Tokyo",
-        "image": "",
+        "image": "./images/tokyo-main.jpg",
         "area": "845 sq. miles",
         "location": "Japan"
     },
     {
         "id": 5,
         "name": "Cancun",
-        "image": "",
+        "image": "./images/cancun.jpg",
         "area": "764 sq. miles",
         "location": "Mexico"
     },
     {
         "id": 6,
         "name": "London",
-        "image": "",
+        "image": "./images/london.jpg",
         "area": "302.6 sq. miles",
-        "location": "New York"
+        "location": "United Kingdom"
     },
     {
         "id": 7,
         "name": "Israel",
-        "image": "",
+        "image": "./images/isreal.jpg",
         "area": "8,019 sq. miles",
-        "location": "New York"
+        "location": "Middle-East"
     },
     {
         "id": 8,
         "name": "Thailand",
-        "image": "",
+        "image": "./images/thailand.jpg",
         "area": "198,117 sq. miles",
-        "location": "New York"
+        "location": "Asia"
     },
     {
         "id": 9,
         "name": "Singapore",
-        "image": "",
+        "image": "./images/SINGAP.jpg",
         "area": "278.6 sq. miles",
-        "location": "New York"
+        "location": "Southeast Asia"
     },
     {
         "id": 10,
         "name": "Brazil",
-        "image": "",
+        "image": "./images/brazil.jpg",
         "area": "3,200,000 sq. miles",
-        "location": "New York"
+        "location": "South America"
+    },
+    {
+        "id": 11,
+        "name": "New York",
+        "image": "./images/new-york.jpg",
+        "area": "",
+        "location": "USA"
+    },
+    {
+        "id": 12,
+        "name": "Madagascar",
+        "image": "./images/MADAGA.jpg",
+        "area": "",
+        "location": "Africa"
     }
 ]

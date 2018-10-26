@@ -1,6 +1,9 @@
 .topnav {
     background-color: lightblue;
-    color: red;
-    height: 120px;
+    color: black;
+    font-family: "Rockwell";
+    font-size: 25px;
+    height: 175px;
     line-height: 50px;
+    margin-top: 10px 10px;
 }
