@@ -8,6 +8,7 @@ class Navbar extends Component {
                 <div className="topnav">
                     <div className="active" >Clicky City Game!</div>
                     <div className="score">Score={this.props.score} Top Score={this.props.topScore}</div>
+                    <div className="className">{this.props.textCss}</div>
                 </div>
             </div>
         );

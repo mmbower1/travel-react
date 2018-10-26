@@ -18,42 +18,45 @@ class App extends Component {
     travels: Travels
   };
 
-  buttonChoice = (event)=> {
+  buttonChoice = (event) => {
 
     const choice = parseInt(event.target.getAttribute('index'));
     console.log(choice);
-    console.log(this.state.travels)
-    const checkIfInArray = this.state.travels.indexOf(choice);
+    console.log(this.state.picked);
 
-    var checkIfTopScore = 0;
-
-    const scoreVal = this.state.score;
-    const topScoreVal = this.state.topScore;
-
-    // Check if you're currently tied for high score
-    if (topScoreVal === scoreVal) {
-      checkIfTopScore = 1;
-    } else {
-      checkIfTopScore = 0;
-    };
-
-    if (checkIfInArray > -1) {
+    if (this.state.picked.indexOf(choice) >= 0) {
+      console.log("wrong");
       // If you pick incorrectly
-      this.setState({ score: 0 , picked: [] , css: "incorrectGuess" , text: "Duplicate! Try again." });
+      this.setState({ 
+        score: 0 , 
+        picked: [], 
+        css: "incorrectGuess" , 
+        text: "Duplicate! Try again." 
+      });
+
     } else {
+      console.log("correct");
+
       // If you pick correctly
-      this.setState({ picked: [...this.state.picked, `${choice}`] , score: this.state.score + 1 , css: "correctGuess", 
-      text: "Good pick!" });
+      this.setState({ 
+        picked: [...this.state.picked, choice],
+        score: this.state.score + 1 , 
+        css: "correctGuess", 
+        text: "Good pick!"
+      });
       
-      this.setState({ topScore: this.state.topScore + checkIfTopScore });
     }
     
+    // Check if you're currently tied for high score
+    if (this.state.score > this.state.topScore) {
+      this.setState({ topScore: this.state.score + 1});
+    };
+
     this.shuffle(this.state.travels);
     
   };
 
   shuffle = (array) => {
-    console.log("here");
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
@@ -68,7 +71,6 @@ class App extends Component {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-    console.log(array);
     return array;
   };
 
