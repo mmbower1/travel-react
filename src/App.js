@@ -19,7 +19,6 @@ class App extends Component {
   };
 
   buttonChoice = (event) => {
-
     const choice = parseInt(event.target.getAttribute('index'));
     console.log(choice);
     console.log(this.state.picked);
