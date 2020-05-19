@@ -21,8 +21,6 @@ class App extends Component {
   buttonChoice = (event) => {
     const choice = parseInt(event.target.getAttribute('index'));
     console.log(choice);
-    console.log(this.state.picked);
-
     if (this.state.picked.indexOf(choice) >= 0) {
       console.log("wrong");
       // If you pick incorrectly
@@ -32,10 +30,8 @@ class App extends Component {
         css: "incorrectGuess" , 
         text: "Duplicate! Try again." 
       });
-
     } else {
       console.log("correct");
-
       // If you pick correctly
       this.setState({ 
         picked: [...this.state.picked, choice],
@@ -43,28 +39,26 @@ class App extends Component {
         css: "correctGuess", 
         text: "Good pick!"
       });
-      
     }
     
     // Check if you're currently tied for high score
     if (this.state.score > this.state.topScore) {
       this.setState({ topScore: this.state.score + 1});
     };
-
     this.shuffle(this.state.travels);
-    
+
+    if (this.state.score === 11) {
+      alert('You traveled the world!');
+    }
   };
 
   shuffle = (array) => {
     var currentIndex = array.length, temporaryValue, randomIndex;
-
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-
       // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
@@ -74,12 +68,12 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className="App" >
         <Navbar score={this.state.score} topScore={this.state.topScore} />
         <Wrapper >
-          <h1 className="title">Travel List</h1>
+          <h1 className="title">Test your memorization. Travel the world :)</h1>
           {this.state.travels.map(travel => (
             <TravelCard 
               key={travel.id}
