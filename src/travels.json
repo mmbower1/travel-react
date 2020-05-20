@@ -44,7 +44,7 @@
     {
         "id": 7,
         "name": "Israel",
-        "image": "./images/isreal.jpg",
+        "image": "./images/israel2.jpg",
         "area": "8,019 sq. miles",
         "location": "Middle-East"
     },
@@ -58,7 +58,7 @@
     {
         "id": 9,
         "name": "Singapore",
-        "image": "./images/SINGAP.jpg",
+        "image": "./images/Singapore.jpg",
         "area": "278.6 sq. miles",
         "location": "Southeast Asia"
     },

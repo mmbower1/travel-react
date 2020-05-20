@@ -1,11 +1,12 @@
 .card-wrapper {
     background-color: white;
-    border-radius: 15px;
-    height: 175px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 220px;
     display: inline-block;
     margin: 5px;
     overflow: hidden;
-    width: 175px;
+    width: 220px;
     
 }
 
@@ -16,6 +17,7 @@
 .card-wrapper:hover {
     /* transform: scale(1.1); */
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.726);
+    transform: scale(1.05);
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
