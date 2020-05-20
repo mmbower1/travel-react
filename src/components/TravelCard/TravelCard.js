@@ -5,8 +5,8 @@ import "./TravelCard.css";
         <div onClick={(event)=> props.buttonChoice(event)} className="card-wrapper">
             <div className="card">
                 <div className="img-container">
-                <h3>{props.name}</h3>
-                <img index={props.index} src={props.image} alt={props.name}/>
+                    <h3>{props.name}</h3>
+                    <img index={props.index} src={props.image} alt={props.name}/>
                 </div>
             </div>
             <div className="content">
