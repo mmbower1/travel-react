@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+import swal from 'sweetalert';
+// components
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import TravelCard from "./components/TravelCard";
@@ -48,7 +50,7 @@ class App extends Component {
     this.shuffle(this.state.travels);
 
     if (this.state.score === 11) {
-      alert('You traveled the world!');
+      swal('You traveled the world!', '');
     }
   };
 
